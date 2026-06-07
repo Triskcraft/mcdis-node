@@ -1,6 +1,6 @@
 # McDis Node Recreation
 
-Recreacion en Node.js 24, TypeScript y ESM de la parte esencial de McDis-RCON: levantar procesos de Minecraft desde un archivo de configuracion, enviar la consola a threads de Discord y aceptar comandos remotos.
+Recreacion en Node.js 24, TypeScript y ESM de la parte esencial de [McDis-RCON](https://github.com/mjpr-3435/McDis-RCON): levantar procesos de Minecraft desde un archivo de configuracion, enviar la consola a threads de Discord y aceptar comandos remotos.
 
 ## Requisitos
 
