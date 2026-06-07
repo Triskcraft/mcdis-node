@@ -8,10 +8,21 @@ Recreacion en Node.js 24, TypeScript y ESM de la parte esencial de McDis-RCON: l
 - Un bot de Discord con `MESSAGE CONTENT INTENT` habilitado
 - Permisos del bot para leer/escribir mensajes y crear threads en el canal panel
 
+## Instalacion
+
+```sh
+npm install -g mcdis
+```
+
+Tambien puedes ejecutarlo sin instalacion global:
+
+```sh
+npx mcdis --config config.json
+```
+
 ## Configuracion rapida
 
 ```sh
-pnpm install
 cp .env.example .env
 cp config.example.json config.json
 ```
@@ -56,8 +67,14 @@ Si no defines `cwd`, McDis usa el nombre del proceso como carpeta. Por ejemplo, 
 ## Uso
 
 ```sh
-pnpm build
-pnpm start -- --config config.json
+mcdis --config config.json
+```
+
+Desde el repositorio:
+
+```sh
+pnpm install
+pnpm dev -- --config config.json
 ```
 
 Referencia completa de API: [API.md](API.md). Documentacion web y schema: [docs/index.html](docs/index.html).

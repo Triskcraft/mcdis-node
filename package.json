@@ -4,6 +4,7 @@
 	"description": "mcdis is a node-based application that allows you to stream a Minecraft server console to Discord, enabling remote and efficient server management through a Discord bot. inspired by McDis-RCON",
 	"type": "module",
 	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -21,6 +22,13 @@
 	"bin": {
 		"mcdis": "dist/cli.js"
 	},
+	"files": [
+		"dist",
+		"docs",
+		"API.md",
+		"config.example.json",
+		".env.example"
+	],
 	"scripts": {
 		"build": "tsc -p tsconfig.json",
 		"dev": "tsx src/cli.ts",
@@ -28,16 +36,28 @@
 		"typecheck": "tsc -p tsconfig.json --noEmit",
 		"lint": "eslint .",
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"prepack": "pnpm build",
+		"prepublishOnly": "pnpm lint && pnpm typecheck && pnpm build"
 	},
 	"packageManager": "pnpm@10.23.0",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/triskcraft/mcdis-node.git"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"minecraft",
+		"discord",
+		"bot",
+		"server",
+		"console",
+		"rcon"
+	],
+	"author": "Eli Maciel <tecno_eli@hotmail.com>",
 	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
 	"bugs": {
 		"url": "https://github.com/triskcraft/mcdis-node/issues"
 	},
