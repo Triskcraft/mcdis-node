@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://eliyya.github.io/mcdis-node/config.schema.json",
+	"$id": "https://triskcraft.github.io/mcdis-node/config.schema.json",
 	"title": "McDis Node config",
 	"description": "Configuration schema for McDis Node Recreation.",
 	"type": "object",
