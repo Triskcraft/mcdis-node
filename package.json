@@ -44,7 +44,7 @@
 	"packageManager": "pnpm@10.23.0",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/triskcraft/mcdis-node.git"
+		"url": "https://github.com/Triskcraft/mcdis-node"
 	},
 	"keywords": [
 		"minecraft",
@@ -60,9 +60,9 @@
 		"access": "public"
 	},
 	"bugs": {
-		"url": "https://github.com/triskcraft/mcdis-node/issues"
+		"url": "https://github.com/Triskcraft/mcdis-node/issues"
 	},
-	"homepage": "https://github.com/triskcraft/mcdis-node#readme",
+	"homepage": "https://github.com/Triskcraft/mcdis-node#readme",
 	"engines": {
 		"node": ">=24"
 	},
