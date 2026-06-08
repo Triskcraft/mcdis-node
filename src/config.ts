@@ -2,6 +2,27 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { z } from 'zod'
 
+export const DEFAULT_CONFIG_PATH = 'mdconfig.json'
+export const CONFIG_SCHEMA_URL = 'https://triskcraft.github.io/mcdis-node/config.schema.json'
+
+const configTemplate = {
+	$schema: CONFIG_SCHEMA_URL,
+	discord: {
+		tokenEnv: 'DISCORD_TOKEN',
+		panelChannelId: '123456789012345678',
+		prefix: '!!',
+	},
+	processes: {
+		smp: {
+			type: 'server',
+			startCommand: 'java -Xms1G -Xmx1G -Dfile.encoding=UTF-8 -jar paper.jar nogui',
+			stopCommand: 'stop',
+			autoStart: false,
+			blacklist: ['Preparing spawn area'],
+		},
+	},
+} as const
+
 const processNameSchema = z
 	.string()
 	.min(1)
@@ -72,6 +93,10 @@ export type AppConfig = {
 	discord: z.infer<typeof discordSchema>
 	mods: z.infer<typeof modsSchema>
 	processes: Record<string, ProcessConfig>
+}
+
+export function createConfigTemplate(): string {
+	return `${JSON.stringify(configTemplate, null, '\t')}\n`
 }
 
 export async function loadConfig(configPath: string): Promise<AppConfig> {

@@ -1,5 +1,5 @@
 {
-	"$schema": "./docs/config.schema.json",
+	"$schema": "https://triskcraft.github.io/mcdis-node/config.schema.json",
 	"discord": {
 		"tokenEnv": "DISCORD_TOKEN",
 		"panelChannelId": "123456789012345678",

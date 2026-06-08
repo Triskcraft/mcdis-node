@@ -17,15 +17,17 @@ npm install -g mc-dis
 Tambien puedes ejecutarlo sin instalacion global:
 
 ```sh
-npx mc-dis --config config.json
+npx mc-dis --config mdconfig.json
 ```
 
 ## Configuracion rapida
 
 ```sh
 cp .env.example .env
-cp config.example.json config.json
+mc-dis
 ```
+
+Si `mdconfig.json` no existe, `mc-dis` lo crea con una plantilla y el atributo `$schema`.
 
 Edita `.env`:
 
@@ -33,7 +35,7 @@ Edita `.env`:
 DISCORD_TOKEN=tu-token
 ```
 
-Edita `config.json` para definir el canal panel y las instancias de Minecraft:
+Edita `mdconfig.json` para definir el canal panel y las instancias de Minecraft:
 
 ```json
 {
@@ -67,14 +69,14 @@ Si no defines `cwd`, McDis usa el nombre del proceso como carpeta. Por ejemplo, 
 ## Uso
 
 ```sh
-mc-dis --config config.json
+mc-dis --config mdconfig.json
 ```
 
 Desde el repositorio:
 
 ```sh
 pnpm install
-pnpm dev -- --config config.json
+pnpm dev -- --config mdconfig.json
 ```
 
 Referencia completa de API: [API.md](API.md). Documentacion web y schema: [docs/index.html](docs/index.html).
@@ -256,7 +258,7 @@ Los mods son extensiones globales, pensadas para coordinar varios procesos. No v
 ./.mdmods
 ```
 
-Se configuran en la raiz de `config.json`:
+Se configuran en la raiz de `mdconfig.json`:
 
 ```json
 {

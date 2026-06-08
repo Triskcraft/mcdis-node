@@ -15,20 +15,21 @@ Referencia de la API para `mods`, `plugins`, procesos, eventos y configuracion.
 Archivo default:
 
 ```txt
-config.json
+mdconfig.json
 ```
 
 CLI:
 
 ```sh
-pnpm start -- --config config.json
-pnpm start -- -c config.json
+pnpm start -- --config mdconfig.json
+pnpm start -- -c mdconfig.json
 ```
 
 Forma minima:
 
 ```json
 {
+	"$schema": "https://triskcraft.github.io/mcdis-node/config.schema.json",
 	"discord": {
 		"tokenEnv": "DISCORD_TOKEN",
 		"panelChannelId": "123456789012345678",
