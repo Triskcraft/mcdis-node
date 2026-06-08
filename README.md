@@ -11,13 +11,13 @@ Recreacion en Node.js 24, TypeScript y ESM de la parte esencial de [McDis-RCON](
 ## Instalacion
 
 ```sh
-npm install -g mcdis
+npm install -g mc-dis
 ```
 
 Tambien puedes ejecutarlo sin instalacion global:
 
 ```sh
-npx mcdis --config config.json
+npx mc-dis --config config.json
 ```
 
 ## Configuracion rapida
@@ -67,7 +67,7 @@ Si no defines `cwd`, McDis usa el nombre del proceso como carpeta. Por ejemplo, 
 ## Uso
 
 ```sh
-mcdis --config config.json
+mc-dis --config config.json
 ```
 
 Desde el repositorio:
@@ -110,7 +110,7 @@ Cada plugin debe exportar una funcion asincrona `load(context)` que devuelve una
 Ejemplo `smp/.mdplugins/auto-save.ts`:
 
 ```ts
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 import type { Message } from 'discord.js'
 
 class AutoSavePlugin extends Plugin {
@@ -209,7 +209,7 @@ Eventos emitidos por McDis:
 Ejemplo de comunicacion entre plugins:
 
 ```ts
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 
 class BroadcasterPlugin extends Plugin {
 	async onConsoleLine(line: string) {
@@ -225,7 +225,7 @@ export async function load(context: PluginContext) {
 ```
 
 ```ts
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 
 class ListenerPlugin extends Plugin {
 	async onLoad() {
@@ -293,8 +293,8 @@ index.cjs
 Ejemplo `.mdmods/process-coordinator.ts`:
 
 ```ts
-import { Mod, type ModContext } from 'mcdis/mod'
-import type { MinecraftProcess } from 'mcdis/plugin'
+import { Mod, type ModContext } from 'mc-dis/mod'
+import type { MinecraftProcess } from 'mc-dis/plugin'
 
 class ProcessCoordinator extends Mod {
 	name = 'process-coordinator'
@@ -355,7 +355,7 @@ Ejemplo:
 ```ts
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-import { Mod, type ModContext } from 'mcdis/mod'
+import { Mod, type ModContext } from 'mc-dis/mod'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -381,7 +381,7 @@ export async function load(context: ModContext) {
 `src/process-plugin.ts`:
 
 ```ts
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 
 class SharedWelcomeProcessPlugin extends Plugin {
 	name = 'shared-welcome-process-plugin'
@@ -415,8 +415,8 @@ this.addCleanup(unregister)
 Tambien puedes inyectar una instancia de `Plugin` directamente, sin usar un archivo:
 
 ```ts
-import { Mod, type ModContext } from 'mcdis/mod'
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Mod, type ModContext } from 'mc-dis/mod'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 
 class InlineWelcomePlugin extends Plugin {
 	name = 'inline-welcome'

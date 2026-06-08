@@ -46,7 +46,7 @@
 					Si un proceso no define <code>cwd</code>, McDis usa ese nombre como carpeta.
 				</p>
 				<pre><code>{
-  "$schema": "https://triskcraft.github.io/mcdis/config.schema.json",
+  "$schema": "https://triskcraft.github.io/mcdis-node/config.schema.json",
   "discord": {
     "tokenEnv": "DISCORD_TOKEN",
     "panelChannelId": "123456789012345678",
@@ -77,7 +77,7 @@
 					<code>.js</code>, <code>.mjs</code>, <code>.cjs</code>, <code>.ts</code>, o
 					directorios con <code>package.json</code> y <code>main</code>.
 				</p>
-				<pre><code>import { Plugin, type PluginContext } from 'mcdis/plugin';
+				<pre><code>import { Plugin, type PluginContext } from 'mc-dis/plugin';
 
 class AutoSavePlugin extends Plugin {
   name = 'auto-save';
@@ -100,7 +100,7 @@ export async function load(context: PluginContext) {
 					Los mods viven en <code>.mdmods</code>. Pueden acceder a <code>McDisApp</code>,
 					escuchar eventos globales, registrar helpers e inyectar plugins en procesos.
 				</p>
-				<pre><code>import { Mod, type ModContext } from 'mcdis/mod';
+				<pre><code>import { Mod, type ModContext } from 'mc-dis/mod';
 
 class BroadcastMod extends Mod {
   async onLoad() {
@@ -182,7 +182,7 @@ export async function load(context: ModContext) {
 					Code u otros editores.
 				</p>
 				<pre><code>{
-  "$schema": "https://mjpr-3435.github.io/mcdis/config.schema.json"
+  "$schema": "https://triskcraft.github.io/mcdis-node/config.schema.json"
 }</code></pre>
 				<p><a href="./config.schema.json">Abrir schema local del sitio</a></p>
 			</section>

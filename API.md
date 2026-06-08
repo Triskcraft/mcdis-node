@@ -113,8 +113,8 @@ plugins: "smp/.mdplugins"
 ## Exports Publicos
 
 ```ts
-import { Plugin, type PluginContext, type MinecraftProcess } from 'mcdis/plugin'
-import { Mod, type ModContext } from 'mcdis/mod'
+import { Plugin, type PluginContext, type MinecraftProcess } from 'mc-dis/plugin'
+import { Mod, type ModContext } from 'mc-dis/mod'
 ```
 
 ## McDisApp
@@ -394,7 +394,7 @@ export async function load(context: PluginContext): Promise<Plugin>
 Ejemplo:
 
 ```ts
-import { Plugin, type PluginContext } from 'mcdis/plugin'
+import { Plugin, type PluginContext } from 'mc-dis/plugin'
 import type { Message } from 'discord.js'
 
 class AutoSavePlugin extends Plugin {
@@ -513,7 +513,7 @@ export async function load(context: ModContext): Promise<Mod>
 Ejemplo:
 
 ```ts
-import { Mod, type ModContext } from 'mcdis/mod'
+import { Mod, type ModContext } from 'mc-dis/mod'
 
 class CoordinatorMod extends Mod {
 	name = 'coordinator'
