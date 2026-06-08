@@ -39,11 +39,11 @@ try {
 }
 
 const config = await loadConfig(configPath)
-const token = process.env.DISCORD_TOKEN ?? config.discord.token
+const token = process.env.DISCORD_TOKEN ?? config.discord.tokenEnv
 
 if (!token) {
 	throw new Error(
-		`Missing Discord token. Set DISCORD_TOKEN in the environment, .env file, or discord.token in the config.`,
+		`Missing Discord token. Set DISCORD_TOKEN in the environment, .env file, or discord.tokenEnv in the config.`,
 	)
 }
 
