@@ -35,6 +35,9 @@ Edita `.env`:
 DISCORD_TOKEN=tu-token
 ```
 
+Si la variable de entorno indicada por `tokenEnv` no existe, McDis usa `discord.token`
+desde `mdconfig.json` como fallback. El token nunca se imprime en consola.
+
 Edita `mdconfig.json` para definir el canal panel y las instancias de Minecraft:
 
 ```json

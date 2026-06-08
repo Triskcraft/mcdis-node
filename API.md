@@ -53,6 +53,7 @@ Forma minima:
 
 ```ts
 type DiscordConfig = {
+	token?: string // fallback si tokenEnv no existe en variables de entorno
 	tokenEnv?: string // default: "DISCORD_TOKEN"
 	panelChannelId: string
 	prefix?: string // default: "!!"

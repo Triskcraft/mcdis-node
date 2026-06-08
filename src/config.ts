@@ -60,6 +60,7 @@ const processSettingsSchema = z.object({
 })
 
 const discordSchema = z.object({
+	token: z.string().min(1).optional(),
 	tokenEnv: z.string().min(1).default('DISCORD_TOKEN'),
 	panelChannelId: z.string().regex(/^\d+$/u),
 	prefix: z.string().min(1).default('!!'),

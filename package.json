@@ -1,6 +1,6 @@
 {
 	"name": "mc-dis",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "mc-dis is a node-based application that allows you to stream a Minecraft server console to Discord, enabling remote and efficient server management through a Discord bot. inspired by McDis-RCON",
 	"type": "module",
 	"main": "dist/index.js",
